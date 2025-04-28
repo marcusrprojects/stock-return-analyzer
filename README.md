@@ -43,7 +43,7 @@ This project provides a Python script (`cr_stock_analyzer.py`) to analyze and vi
 2.  **Create and activate a virtual environment (recommended):**
     ```bash
     # Create
-    python -m venv venv
+    python3 -m venv venv
     # Activate (Linux/macOS)
     source venv/bin/activate
     # Activate (Windows CMD)
