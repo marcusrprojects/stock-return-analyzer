@@ -63,3 +63,45 @@ Run the script from your terminal.
 **Basic Usage (Defaults: DIS vs ^GSPC, max period, saves to `data_viz/`):**
 ```bash
 python cr_stock_analyzer.py
+```
+
+Analyze a different stock (e.g., AAPL) for the last 5 years:
+```bash
+python cr_stock_analyzer.py -t AAPL -p 5y
+```
+
+Change benchmark (e.g., Nasdaq ^IXIC) and output file:
+```bash
+python cr_stock_analyzer.py -t MSFT -b "^IXIC" -o outputs/msft_vs_nasdaq.png
+```
+
+Customize Appearance (e.g., different colors, no fill):
+```bash
+python cr_stock_analyzer.py -t NVDA --stock-color green --bench-color gray --bg-color white --graph-bg-color lightgray --no-fill
+```
+
+Prevent saving the plot:
+```bash
+python cr_stock_analyzer.py --no-save
+```
+
+Show axis labels and use tight X-axis limits:
+```bash
+python cr_stock_analyzer.py --show-labels --tight-xlim
+```
+
+View all options:
+```bash
+python cr_stock_analyzer.py --help
+```
+
+
+## Files
+- `cr_stock_analyzer.py`: The main Python script for analysis and plotting.
+- `requirements.txt`: Lists the necessary Python packages with pinned versions for reproducibility.
+- `README.md`: This file.
+- `data_viz/` (Optional): Default directory where generated plots are saved if no output path is specified. Consider adding this to .gitignore if you don't want generated images tracked by Git.
+
+## Acknowledgements
+Data sourced from Yahoo Finance via the yfinance library.
+Built with the help of pandas, numpy, and matplotlib.
